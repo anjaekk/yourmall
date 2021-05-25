@@ -1,2 +1,49 @@
-<h2>Hello, Django</h2>
-<p>아직까지 장고는 어렵네유</p>
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Your mall</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="{% static 'clothes/css/styles.css' %}">
+    <link rel="stylesheet" type="text/css"
+    href="https://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css">
+</head>
+<body> 
+    <div id="header">
+        <div class="container">
+            <div class="nav">
+                <a href="index.html"><img src="{% static 'clothes/images/logo.png' %}"></a>
+            </div>
+            <div class="header_txt">
+                <p>In order to be <b>irreplaceable</b>,</p>
+                <p>one must always be <b>different.</b></p>
+                <h1><img src="{% static 'clothes/images/header-txt.png' %}" style="width=300; height=80;"></h1> 
+            </div>
+        </div>
+    </div>
+    <div id="content">
+       <div class="container">
+            <div class="content_txt">
+                <h2>Today's fashion</h2>
+                <p class="date-text"> July 16, 2020 </p>
+            </div>
+            <div class="clothes_container">
+                <div class="clothes">
+                  <img src="{% static 'clothes/images/pink.jpg' %}"/>
+                  <div class="info">
+                    <h3>Hot trend</h3>
+                    <p>S/S 2021 Trends</p>
+                    <a href="#">자세히 보기</a>
+                </div>
+           </div>
+       </div>
+    </div>
+    <div id="footer">
+        <div class="container">
+            <div class="footer">
+                <img src="{% static 'clothes/images/logo.png' %}"> 
+            </div>
+        </div>
+    </div>
+</body>
+</html>
