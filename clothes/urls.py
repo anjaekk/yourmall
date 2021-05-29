@@ -5,5 +5,5 @@ from . import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.index),
-    path('<str:trend>/', views.trend_detail)
+    path('<int:pk>/', views.trend_detail)
 ]

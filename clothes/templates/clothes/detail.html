@@ -1,6 +1,8 @@
 {% load static %}
-
-<h2>{{name}}</h2>
-<div>{{description}}</div>
-<img srt={% get_static_prefix %}{{img_path}} />
+<div class="nav">
+    <a href="/clothes/"><img src="{% static 'clothes/images/logo.png' %}"></a>
+</div>
+<h2>{{trend.name}}</h2>
+<img src={% get_static_prefix %}{{trend.img_path}} width="500"/>
+<div>{{trend.description}}</div>
 

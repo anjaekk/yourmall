@@ -2,20 +2,19 @@ from django.shortcuts import render
 from django.http import HttpResponse
 from datetime import datetime
 from django.http import Http404
-
+from clothes.models import Trend
 # Create your views here.
 
 def index(request):
+    context = dict()
     today = datetime.today().date()
-    context = {"date":today}
+    trends = Trend.objects.all()
+    context ["date"] = today
+    context["trends"] = trends
     return render(request, 'clothes/index.html', context=context)
 
-def trend_detail(request, trend):
+def trend_detail(request, pk):
     context = dict()
-    if trend == "2021ss" :
-        context["name"] = "S/S 2021"
-        context["description"] = "2021년 Spring/Summer 트렌드"
-        context["img_path"] = "clothes/images/2021ss.jpg"
-    else:
-        raise Http404()
+    trend = Trend.objects.get(id=pk)
+    context["trend"] = trend
     return render(request, 'clothes/detail.html', context=context)

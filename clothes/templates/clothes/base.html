@@ -12,7 +12,7 @@
     <div id="header">
         <div class="container">
             <div class="nav">
-                <a href="index.html"><img src="{% static 'clothes/images/logo.png' %}"></a>
+                <a href="/clothes/"><img src="{% static 'clothes/images/logo.png' %}"></a>
             </div>
             <div class="header_txt">
                 <p>In order to be <b>irreplaceable</b>,</p>
@@ -25,25 +25,13 @@
        <div class="container">
             <div class="content_txt">
                 <h2>Today's fashion</h2>
-                <p class="date-text"> July 16, 2020 </p>
+                <p class="date-text"> {{date}}</p
             </div>
             <div class="clothes_container">
-                <div class="clothes">
-                  <img src="{% static 'clothes/images/pink.jpg' %}"/>
-                  <div class="info">
-                    <h3>Hot trend</h3>
-                    <p>S/S 2021 Trends</p>
-                    <a href="#">자세히 보기</a>
-                </div>
-           </div>
-       </div>
-    </div>
-    <div id="footer">
-        <div class="container">
-            <div class="footer">
-                <img src="{% static 'clothes/images/logo.png' %}"> 
+            {% block clothes-container %}
+            {% endblock clothes-container %}
             </div>
-        </div>
+       </div>
     </div>
 </body>
 </html>

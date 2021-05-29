@@ -28,15 +28,11 @@ img {
 }
 #header{
     height: 814px;
-    background: url(../images/header-img.jpg) no-repeat right top /550px 813px,url(../images/ractangle.png) no-repeat left 520px/92px 169px;
+    background: url(../images/header-img.jpg) no-repeat right top;
 }
 #content{
     height: 100%;
-    background: url(../images/footer-back.png) no-repeat right 388px/108px 192px, url(../images/footer-back.png) no-repeat left 273px/1465px 952px, url(../images/footer-back.png) no-repeat 5% 1550px/131px 138px;
-}
-#footer{
-    background: url(../images/footer-back.png) no-repeat right bottom/1456px;
-    margin-top: 400px;
+    background: url(../images/footer-back.png) no-repeat left 273px/1465px 952px;
 }
 .container{
     width: 1200px;
@@ -51,22 +47,22 @@ img {
     margin: 200px 0 0 110px;
 }
 .header_txt p{
-    margin-bottom: 10px;
+    margin-bottom: 5px;
     font-size: 20px;
     letter-spacing: 8px;
     color: #333236;
 }
 
 .content_txt h2 {
-    text-align: center;
+    text-align: left;
     font-size: 28px;
     font-weight: 600;
     letter-spacing: -0.1px;
     color: #333236;
 }
 .content_txt p{
-    margin: 13px 0 76px;
-    text-align: center;
+    margin: 13px 0 30px;
+    text-align: left;
     font-size: 17px;
     font-weight: 600;
     color: #d71414;
@@ -83,7 +79,6 @@ img {
 }
 .clothes{
     flex-basis: 350px;
-    padding-bottom: 146px;
     position: relative;
 }
 .clothes:after{
@@ -111,7 +106,7 @@ img {
     color: #333236;
 }
 .info p{
-    padding-bottom: 34px;
+    padding-bottom: 10px;
     line-height: 1.5;
     letter-spacing: 0.1px;
     font-size: 17px;
