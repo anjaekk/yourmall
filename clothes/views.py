@@ -14,7 +14,12 @@ def index(request):
     return render(request, 'clothes/index.html', context=context)
 
 def trend_detail(request, pk):
-    context = dict()
-    trend = Trend.objects.get(id=pk)
-    context["trend"] = trend
+    try:
+        context = dict()
+        trend = Trend.objects.get(id=pk)
+        context["trend"] = trend
+    # 404예외처리 
+    except Trend.DoesNotExist:
+        raise Http404('게시물을 찾을 수 없습니다.')
+    
     return render(request, 'clothes/detail.html', context=context)
