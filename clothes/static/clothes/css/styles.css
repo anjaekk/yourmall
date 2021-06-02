@@ -28,7 +28,7 @@ img {
 }
 #header{
     height: 814px;
-    background: url(../images/header-img.jpg) no-repeat right top;
+    background: url(../images/header-img.jpg) no-repeat right top /550px 813px;
 }
 #content{
     height: 100%;
